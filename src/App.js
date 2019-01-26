@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Users from './components/Users';
+import Hits from './components/Hits';
 
 
-ReactDOM.render(<Users />,document.querySelector("#root"));
+ReactDOM.render(<Hits />,document.querySelector("#root"));
