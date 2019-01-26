@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Users.css';
 
-const onSearch=(searchTerm)=>(user)=>(
-	user.title.toLowerCase().includes(searchTerm.toLowerCase())
+const onSearch=(searchTerm)=>(item)=>(
+	item.title.toLowerCase().includes(searchTerm.toLowerCase())
 	);
 
 class Users extends Component {
@@ -44,9 +44,9 @@ class Users extends Component {
            </div>
            <div className="list">
            	{
-           		result.filter(onSearch(this.state.searchTerm)).map((user)=>
-           		<ul key={user.objectID}>
-           			<li>{user.title}</li>
+           		result.filter(onSearch(this.state.searchTerm)).map((item)=>
+           		<ul key={item.objectID}>
+           			<li>{item.title}</li>
            		</ul>
            			)
            	}
