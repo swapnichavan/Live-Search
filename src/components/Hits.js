@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Hits.css';
 
-
 class Hits extends Component {
     constructor(props) {
         super(props);
@@ -25,7 +24,7 @@ class Hits extends Component {
 
     onHandleChange(e){
     	this.setState({searchTerm:e.target.value})
-
+      this.onHandleSarch(this.state.searchTerm);
     }
     
     render() {
