@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import './Hits.css';
 
-const onSearch=(searchTerm)=>(item)=>(
-	item.title.toLowerCase().includes(searchTerm.toLowerCase())
-	);
 
 class Hits extends Component {
     constructor(props) {
@@ -28,6 +25,7 @@ class Hits extends Component {
 
     onHandleChange(e){
     	this.setState({searchTerm:e.target.value})
+
     }
     
     render() {
@@ -44,7 +42,7 @@ class Hits extends Component {
            </div>
            <div className="list">
            	{
-           		result.filter(onSearch(this.state.searchTerm)).map((item)=>
+           		result.map((item)=>
            		<ul key={item.objectID}>
            			<li>{item.title}</li>
            		</ul>
